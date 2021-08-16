@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app'
+import App from 'next/app'
 import { useRouter } from 'next/dist/client/router'
 import Layout from '../components/Layout'
 import '../styles/style.scss'
@@ -18,4 +19,5 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       </Layout>
     )
 }
+
 export default MyApp

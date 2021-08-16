@@ -1,7 +1,11 @@
 import { NextComponentType } from "next"
 import Link from "next/link"
+import useUser from "../hooks/useUser"
+import { User } from "../types/user"
 
-const NavbarProfile: NextComponentType = () => {
+const NavbarProfile = () => {
+    const user: User = useUser()
+
     return (
         <div id="navbar-profile" className="dropdown ms-auto me-5">
             <div className="d-flex align-items-center position-relative">
@@ -9,7 +13,7 @@ const NavbarProfile: NextComponentType = () => {
                     <div id="img" style={{ backgroundImage: `url('http://picsum.photos/480/320')` }}></div>
                 </div>
                 <div>
-                    <h6 className="text-light mb-0 pe-4">Joy</h6>
+                    <h6 className="text-light mb-0 pe-4">{user && user.username}</h6>
                     <small>Admin</small>
                 </div>
                 <a className="dropdown-toggle stretched-link" role="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

@@ -1,6 +1,28 @@
 import type { NextPage } from 'next'
+import Router from 'next/router'
+import React, { useState } from 'react'
+import useToken from '../hooks/useToken'
+import { loginUser } from '../lib/auth'
 
 const Login: NextPage = () => {
+  const { token, setToken } = useToken()
+  const [ email, setEmail ]: any = useState()
+  const [ password, setPassword ]: any = useState()
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault()
+
+    const token = await loginUser({
+      email,
+      password
+    })
+
+    if (token.access_token) {
+      setToken(token)
+      Router.push('/')
+    }
+  }
+
   return (
     <div id="login">
       <div className="container-fluid d-flex vh-100">
@@ -14,14 +36,14 @@ const Login: NextPage = () => {
               <div className="card-body">
                 <h5 className="card-title text-center">Sign In</h5>
                 <h6 className="card-subtitle mb-2 text-center text-muted px-4 pb-4">Enter your email address and password to access admin panel.</h6>
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="mb-4">
-                    <label htmlFor="exampleInputEmail1" className="form-label fw-bolder">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Enter your email" aria-describedby="emailHelp"></input>
+                    <label htmlFor="inputEmail" className="form-label fw-bolder">Email address</label>
+                    <input type="email" className="form-control" id="inputEmail" placeholder="Enter your email" aria-describedby="emailHelp" onChange={(e) => setEmail(e.target.value)}></input>
                   </div>
                   <div className="mb-5">
-                    <label htmlFor="exampleInputPassword1" className="form-label fw-bolder">Password</label>
-                    <input type="password" className="form-control" placeholder="Enter your password" id="exampleInputPassword1"></input>
+                    <label htmlFor="inputPassword" className="form-label fw-bolder">Password</label>
+                    <input type="password" className="form-control" placeholder="Enter your password" onChange={(e) => setPassword(e.target.value)} id="inputPassword"></input>
                   </div>
                   <div className="d-flex">
                     <button type="submit" className="btn btn-primary mx-auto">Submit</button>
