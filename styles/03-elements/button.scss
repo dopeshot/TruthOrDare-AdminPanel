@@ -1,0 +1,10 @@
+.btn.btn-primary {
+    color: white;
+    &:hover {
+        color: #fff;
+        background-color: #727cf5;
+        box-shadow: 3px 3px 15px 4px rgba(114, 124, 245, 0.3);
+        transform: translate(0, -3px);
+        transition: transform 0.1s ease;
+    }
+}

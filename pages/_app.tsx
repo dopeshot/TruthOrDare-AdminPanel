@@ -6,7 +6,6 @@ import '../styles/style.scss'
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const router = useRouter()
   const { asPath, route, pathname } = router
-  console.log(asPath)
 
   if (asPath == "/login")
     return (
