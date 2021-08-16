@@ -1,13 +1,16 @@
-import Navbar from './Sidebar'
-import Footer from './Footer'
+import Navbar from './Navbar'
 import { NextComponentType } from 'next'
+import Sidebar from './Sidebar'
 
 const Layout: NextComponentType = ({ children }) => {
   return (
     <>
+    <Sidebar />
     <main>
       <Navbar />
-        {children}
+      <div className="mt-3 ms-3">
+      {children}
+      </div>
     </main>
     </>
   )

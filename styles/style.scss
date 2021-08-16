@@ -10,9 +10,10 @@
 
 /* Category 04 contains all "bigger" components */
 @import "04-components/sidebar"; 
+@import "04-components/navbar-profile"; 
 
 /* Category 05 is for any utility classes that are not assigned to a specific component. */
-@import "05-utilities/text-color";
+@import "05-utilities/text";
 
 /* Bootstrap */
 @import "../node_modules/bootstrap/scss/bootstrap";

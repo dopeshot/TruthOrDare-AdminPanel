@@ -1,0 +1,103 @@
+// Colors
+$theme-colors: (
+        "primary": #727cf5,
+        //dark violett
+        "secondary": #3a444e,
+        //dark grey (for sidebar background)
+        "info": #e6aa00,
+        // yellow
+        "danger": #e25370,
+        // red
+        "success": #09bb88,
+        // green
+        "light": #bccee4,
+        "dark": #3a444e //dark grey (for content box),
+);
+
+// Body
+$body-bg: #343a40; //background dark blue
+$body-color: #aab8c5; //body font white
+
+// Font
+$font-family-sans-serif: "Nunito", sans-serif; //font text
+$headings-font-family: "Nunito", sans-serif; //font headings
+$headings-font-weight: 600; //semibold headings
+$font-weight-bolder: 600; //font semibold
+
+$font-sizes: (
+        5: 15px,
+        6: 10px,
+);
+
+// Border
+$border-radius: 0;
+$border-radius-lg: 0;
+$border-radius-sm: 0;
+
+// Navbar
+$navbar-dark-color: #8391a2;
+$navbar-dark-hover-color: #bccee4;
+$navbar-dark-active-color: #ffffff;
+
+$navbar-nav-link-padding-x: 1rem;
+
+$navbar-light-toggler-border-color: transparent;
+
+// Nav
+$nav-link-padding-y: 0.5rem;
+$nav-link-color: #8391a2;
+$nav-link-hover-color: #bccee4;
+
+// Button
+$btn-font-size: 16px;
+$btn-padding-y: 0.5rem;
+$btn-padding-x: 3rem;
+$btn-border-radius: 0px;
+
+// Pagination
+$pagination-color: #fff;
+$pagination-bg: transparent;
+$pagination-border-radius: 0;
+$pagination-border-color: #4561ee;
+
+$pagination-focus-color: #fff !important;
+$pagination-focus-bg: #4561ee;
+$pagination-focus-box-shadow: none;
+
+$pagination-hover-color: #ffffff !important;
+$pagination-hover-bg: #4561ee;
+$pagination-hover-border-color: #4561ee;
+
+$pagination-active-color: #ffffff;
+$pagination-active-bg: #4561ee;
+$pagination-active-border-color: #4561ee;
+
+// Dropdown
+$caret-width: 0;
+$dropdown-padding-y: .6rem;
+$dropdown-padding-x: .7rem;
+$dropdown-item-padding-y: .6rem;
+$dropdown-bg: #3a444e;
+$dropdown-color: #fff;
+$dropdown-border-width: 0;
+$dropdown-link-color: #8391a2;
+$dropdown-link-hover-color: #bccee4;
+$dropdown-link-hover-bg: #3a444e;
+$dropdown-link-active-color: #ffffff;
+$dropdown-link-active-bg: #3a444e;
+
+
+//utility
+$utilities: (
+        "opacity": (
+                property: opacity,
+                responsive: true,
+                values: (
+                        0: 0,
+                        25: 0.2,
+                        50: 0.5,
+                        70: 0.7,
+                        100: 1,
+                ),
+        ),
+);

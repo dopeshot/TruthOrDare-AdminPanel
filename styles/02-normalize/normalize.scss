@@ -1,0 +1,14 @@
+.nav .nav-link{
+    padding: 0.5rem 0rem;
+    &:active {
+        color: #FFF;
+    }
+}
+
+.active {
+    background-color: transparent!important;
+}
+
+h1 {
+    color: white;
+}

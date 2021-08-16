@@ -1,51 +1,61 @@
 import Link from 'next/link'
 
-export default function Sidebar() {
+const Sidebar = () => {
     return <>
-    <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style={{ width: '200px'}}>
-        <Link href="/">
-            <a className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">Truth or Dare</a>
-        </Link>
-        <ul className="nav nav-pills flex-column mb-auto">
-            <li>
-                <Link href="#">
-                    <a className="nav-link text-white">Dashboard</a>
-                </Link>
-            </li>
-            <li>
-                <Link href="#">
-                    <a className="nav-link text-white">Orders</a>
-                </Link>
-            </li>
-            <li>
-                <Link href="#">
-                    <a className="nav-link text-white">Products</a>
-                </Link>
-            </li>
-            <li>
-                <Link href="#">
-                    <a className="nav-link text-white">Customers</a>
-                </Link>
-            </li>
-        </ul>
-        <hr></hr>
-        <div className="dropdown">
-            <Link href="#" data-bs-toggle="dropdown" aria-expanded="false">
-                <a id="dropdownUser1" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle"></a>
+        <div className="sidebar p-3 bg-dark">
+            <Link href="/">
+                <a className="d-flex justify-content-center mb-3 text-white text-decoration-none fw-bolder">Truth or Dare<br></br>Admin Panel</a>
             </Link>
-            <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2"></img>
-                <strong>mdo</strong>
-            <ul className="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
-                <li>
-                    <hr className="dropdown-divider"></hr>
+            <ul className="nav nav-pills flex-column mb-auto mt-4 ps-3">
+                <li className="fs-6 fls-1 fw-bold text-uppercase text-lightgrey">
+                    Übersicht
                 </li>
-                <li>
-                <Link href="#">
-                    <a className="dropdown-item">Sign out</a>
-                </Link></li>
+                <li className="nav-item d-flex align-items-baseline">
+                    <i className="fas fa-home fs-5 pe-2"></i>
+                    <Link href="/">
+                        <a className="nav-link active" aria-current="page">Dashboard</a>
+                    </Link>
+                </li>
+                <li className="fs-6 fls-1 fw-bold text-uppercase text-lightgrey mt-3">
+                    Elemente
+                </li>
+                <li className="d-flex align-items-baseline">
+                    <i className="fas fa-th pe-2"></i>
+                    <Link href="/categories">
+                        <a className="nav-link">Categories</a>
+                    </Link>
+                </li>
+                <li className="d-flex align-items-baseline">
+                    <i className="fas fa-square pe-2"></i>
+                    <Link href="/sets">
+                        <a className="nav-link">Sets</a>
+                    </Link>
+                </li>
+                <li className="d-flex align-items-baseline">
+                    <i className="fas fa-list-ul pe-2"></i>
+                    <Link href="/tasks">
+                        <a className="nav-link">Tasks</a>
+                    </Link>
+                </li>
+                <li className="d-flex align-items-baseline">
+                    <i className="fas fa-user pe-2"></i>
+                    <Link href="/user">
+                        <a className="nav-link">User</a>
+                    </Link>
+                </li>
+                <li className="fs-6 fls-1 fw-bold text-uppercase text-lightgrey mt-3">
+                    Reports
+                </li>
+                <li className="d-flex align-items-baseline">
+                    <i className="fas fa-bullhorn pe-2"></i>
+                    <Link href="/reports">
+                        <a className="nav-link">Reports</a>
+                    </Link>
+                </li>
             </ul>
         </div>
-    </div>
-    <div className="b-example-divider"></div>
+        <div className="b-example-divider"></div>
     </>
 }
+
+export default Sidebar
