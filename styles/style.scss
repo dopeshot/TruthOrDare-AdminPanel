@@ -1,0 +1,19 @@
+/* Categories 01 to 03 are the basics. */
+@import "01-variables-mixins/variables";
+
+@import "02-normalize/normalize-bootstrap";
+@import "02-normalize/normalize";
+
+/* Category 03 can contain any default HTML element. */
+@import "03-elements/forms";
+@import "03-elements/button";
+
+/* Category 04 contains all "bigger" components */
+@import "04-components/sidebar"; 
+
+/* Category 05 is for any utility classes that are not assigned to a specific component. */
+@import "05-utilities/text-color";
+
+/* Bootstrap */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
