@@ -12,9 +12,11 @@
 @import "04-components/sidebar"; 
 @import "04-components/navbar-profile"; 
 @import "04-components/login"; 
+@import "04-components/tasks"; 
 
 /* Category 05 is for any utility classes that are not assigned to a specific component. */
 @import "05-utilities/text";
+@import "05-utilities/background";
 
 /* Bootstrap */
 @import "../node_modules/bootstrap/scss/bootstrap";

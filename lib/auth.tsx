@@ -1,5 +1,3 @@
-import { useState } from "react";
-import useToken from "../hooks/useToken";
 import { Credentials } from "../types/credentials";
 
 export async function loginUser(credentials: Credentials) {

@@ -52,7 +52,7 @@ const Login: NextPage = () => {
               </div>
             </div>
             <div className="mt-2 text-center">
-            <small className="text-muted"><i className="far fa-copyright"></i> 2021 Truth or Dare</small>
+            <small className="text-muted"><i aria-hidden className="far fa-copyright"></i> 2021 Truth or Dare</small>
             </div>
           </div>
         </div>

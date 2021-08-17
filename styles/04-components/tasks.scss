@@ -1,0 +1,20 @@
+#tasks {
+    .grid-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 60px;
+        justify-items: center;
+        #add-task-button {
+            justify-self: end;
+        }
+        #add-reload-button {
+            justify-self: end;
+        }
+        form {
+            justify-self: start;
+        }
+    }
+    .username {
+        width: 200px; 
+        word-break: break-word;
+    }
+}

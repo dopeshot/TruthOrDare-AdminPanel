@@ -1,9 +1,9 @@
 // Colors
 $theme-colors: (
         "primary": #727cf5, //dark violett
-        "secondary": #3a444e, //dark grey (for sidebar background)
-        "info": #e6aa00, // yellow
-        "danger": #e25370, // red
+        "secondary": #4c5460, //dark grey (for sidebar background)
+        "warning": #e6aa00, // yellow
+        "danger": #fa5c7c, // red
         "success": #09bb88, // green
         "light": #bccee4,
         "dark": #3a444e //dark grey (for content box),
@@ -46,8 +46,9 @@ $nav-link-hover-color: #bccee4;
 // Button
 $btn-font-size: 16px;
 $btn-padding-y: 0.5rem;
-$btn-padding-x: 3rem;
+$btn-padding-x: 2.7rem;
 $btn-border-radius: 0px;
+$btn-font-weight: 700;
 
 $btn-link-color: #FFF;
 $btn-link-hover-color: #bccee4;
@@ -76,6 +77,17 @@ $input-btn-focus-color: #8391a2;
 $input-btn-focus-box-shadow: 0;
 $input-btn-border-width: 0;
 
+// Form Selected
+$form-select-border-width: 0;
+$form-select-focus-border-color: transparent;
+
+// Tables
+$table-border-color: rgb(74, 82, 93);
+
+// Badge
+$badge-border-radius: 3px;
+$badge-padding-y: 0.2rem;
+$badge-padding-x: 0.5rem;
 
 // Dropdown
 $caret-width: 0;

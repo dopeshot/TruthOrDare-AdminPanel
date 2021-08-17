@@ -11,7 +11,7 @@ const Sidebar = () => {
                     Übersicht
                 </li>
                 <li className="nav-item d-flex align-items-baseline">
-                    <i className="fas fa-home fs-5 pe-2"></i>
+                    <i aria-hidden className="fas fa-home fs-5 pe-2"></i>
                     <Link href="/">
                         <a className="nav-link active" aria-current="page">Dashboard</a>
                     </Link>
@@ -20,25 +20,25 @@ const Sidebar = () => {
                     Elemente
                 </li>
                 <li className="d-flex align-items-baseline">
-                    <i className="fas fa-th pe-2"></i>
+                    <i aria-hidden className="fas fa-th pe-2"></i>
                     <Link href="/categories">
                         <a className="nav-link">Categories</a>
                     </Link>
                 </li>
                 <li className="d-flex align-items-baseline">
-                    <i className="fas fa-square pe-2"></i>
+                    <i aria-hidden className="fas fa-square pe-2"></i>
                     <Link href="/sets">
                         <a className="nav-link">Sets</a>
                     </Link>
                 </li>
                 <li className="d-flex align-items-baseline">
-                    <i className="fas fa-list-ul pe-2"></i>
+                    <i aria-hidden className="fas fa-list-ul pe-2"></i>
                     <Link href="/tasks">
                         <a className="nav-link">Tasks</a>
                     </Link>
                 </li>
                 <li className="d-flex align-items-baseline">
-                    <i className="fas fa-user pe-2"></i>
+                    <i aria-hidden className="fas fa-user pe-2"></i>
                     <Link href="/user">
                         <a className="nav-link">User</a>
                     </Link>
@@ -47,7 +47,7 @@ const Sidebar = () => {
                     Reports
                 </li>
                 <li className="d-flex align-items-baseline">
-                    <i className="fas fa-bullhorn pe-2"></i>
+                    <i aria-hidden className="fas fa-bullhorn pe-2"></i>
                     <Link href="/reports">
                         <a className="nav-link">Reports</a>
                     </Link>

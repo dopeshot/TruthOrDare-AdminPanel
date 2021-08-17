@@ -17,13 +17,13 @@ const NavbarProfile = () => {
                     <small>Admin</small>
                 </div>
                 <a className="dropdown-toggle stretched-link" role="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    <i className="fas fa-chevron-down text-light fs-5 ms-4"></i>
+                    <i aria-hidden className="fas fa-chevron-down text-light fs-5 ms-4"></i>
                 </a>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                     <li>
                         <Link href="/">
                             <a className="dropdown-item">
-                                <i className="fas fa-user-circle fs-5 pe-3"></i>
+                                <i aria-hidden className="fas fa-user-circle fs-5 pe-3"></i>
                                 My Account
                             </a>
                         </Link>
@@ -31,7 +31,7 @@ const NavbarProfile = () => {
                     <li>
                         <Link href="/" >
                             <a className="dropdown-item">
-                                <i className="fas fa-sign-out-alt fs-5 pe-3"></i>
+                                <i aria-hidden className="fas fa-sign-out-alt fs-5 pe-3"></i>
                                 Logout
                             </a>
                         </Link>
