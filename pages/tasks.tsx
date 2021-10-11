@@ -1,16 +1,32 @@
 import type { NextPage } from 'next'
 import { useState } from 'react'
+import TaskRow from '../components/Task'
 import { fetchTasksList } from '../lib/tasks'
 import { TasksType } from '../types/tasks'
 
-const Tasks: NextPage = ({ initialData  }: any) => {
+const Tasks: NextPage = ({ initialData }: any) => {
   const [tasks, setTask] = useState(initialData)
+  const [nextPage, setNextPage] = useState(1)
 
-  const handleClick = async (event: any) => {
+  const handleReload = async (event: any) => {
     event.preventDefault()
+
     const result = await fetchTasksList()
     return setTask(result.tasks);
-};
+  }
+
+  const handleLoadMore = async (event: any) => {
+    event.preventDefault()
+
+    if (nextPage === undefined) {
+      console.warn("No more pages")
+      return
+    }
+    const result = await fetchTasksList(5, nextPage)
+
+    setNextPage(result.paging.nextPage)
+    return setTask([...tasks, ...result.tasks])
+  }
 
   return (
     <div id="tasks" className="container-fluid">
@@ -43,8 +59,8 @@ const Tasks: NextPage = ({ initialData  }: any) => {
           <div id="add-task-button">
             <button type="submit" className="btn btn-danger mx-auto"><i aria-hidden className="fas fa-list-ul pe-3"></i>Add Task</button>
           </div>
-          <div id="add-reload-button" className="align-self-center">
-            <button className="button-text" onClick={handleClick}><i aria-hidden className="fas fa-sync-alt pe-3" ></i></button>
+          <div id="reload-button" className="align-self-center">
+            <button className="button-text" onClick={handleReload}><i aria-hidden className="fas fa-sync-alt pe-3" ></i></button>
           </div>
         </div>
         <div className="col-12">
@@ -65,7 +81,6 @@ const Tasks: NextPage = ({ initialData  }: any) => {
             <tbody>
               {tasks && tasks.map((task: TasksType, key: number) => (
                 <tr key={key}>
-                  {console.log(task)}
                   <th scope="row">{key + 1}</th>
                   <td>{task._id}</td>
                   <td><span className="badge bg-transparent-primary text-primary">{task.type}</span></td>
@@ -86,6 +101,11 @@ const Tasks: NextPage = ({ initialData  }: any) => {
               ))}
             </tbody>
           </table>
+        </div>
+        <div className="col-12 d-flex justify-content-center">
+          <div id="reload-button" className="align-self-center">
+            <button className="btn btn-primary" onClick={handleLoadMore}>Load more</button>
+          </div>
         </div>
       </div>
     </div>
